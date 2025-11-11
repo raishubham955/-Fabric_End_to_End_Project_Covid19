@@ -1,0 +1,182 @@
+{
+  "properties": {
+    "activities": [
+      {
+        "type": "Copy",
+        "typeProperties": {
+          "source": {
+            "type": "LakehouseTableSource",
+            "datasetSettings": {
+              "type": "LakehouseTable",
+              "typeProperties": {
+                "table": "covid_gold"
+              },
+              "schema": [],
+              "connectionSettings": {
+                "name": "Demo",
+                "properties": {
+                  "type": "Lakehouse",
+                  "typeProperties": {
+                    "artifactId": "29db5288-1204-8f6a-4086-4dcb6e283668",
+                    "workspaceId": "00000000-0000-0000-0000-000000000000",
+                    "rootFolder": "Tables"
+                  },
+                  "externalReferences": {
+                    "connection": "9b9b4a8c-c1a7-4ccf-9f36-4aa4acd95fb6"
+                  },
+                  "annotations": []
+                }
+              },
+              "annotations": []
+            }
+          },
+          "sink": {
+            "type": "DataWarehouseSink",
+            "tableOption": "autoCreate",
+            "allowCopyCommand": true,
+            "copyCommandSettings": {},
+            "datasetSettings": {
+              "type": "DataWarehouseTable",
+              "typeProperties": {
+                "schema": "dbo",
+                "table": "covid_gold"
+              },
+              "schema": [],
+              "connectionSettings": {
+                "name": "Demo warehouse",
+                "properties": {
+                  "type": "DataWarehouse",
+                  "typeProperties": {
+                    "artifactId": "2543096a-1f58-4626-ba1a-705c5fa60f81",
+                    "endpoint": "oymdm6vj3qfuvb3o3hfz743ddi-nufd2uodtchuxjkmfcv6g57rmq.datawarehouse.fabric.microsoft.com",
+                    "workspaceId": "513d0a6d-98c3-4b8f-a54c-28abe377f164"
+                  },
+                  "externalReferences": {
+                    "connection": "ddc931bf-9879-43f6-a0a6-a88b70890f5a"
+                  },
+                  "annotations": []
+                }
+              },
+              "annotations": []
+            }
+          },
+          "translator": {
+            "type": "TabularTranslator",
+            "mappings": [
+              {
+                "source": {
+                  "name": "country",
+                  "type": "String",
+                  "physicalType": "string"
+                },
+                "sink": {
+                  "name": "country",
+                  "physicalType": "varchar",
+                  "length": "8000"
+                }
+              },
+              {
+                "source": {
+                  "name": "cases",
+                  "type": "Int64",
+                  "physicalType": "long"
+                },
+                "sink": {
+                  "name": "cases",
+                  "physicalType": "bigint"
+                }
+              },
+              {
+                "source": {
+                  "name": "deaths",
+                  "type": "Int64",
+                  "physicalType": "long"
+                },
+                "sink": {
+                  "name": "deaths",
+                  "physicalType": "bigint"
+                }
+              },
+              {
+                "source": {
+                  "name": "recovered",
+                  "type": "Int64",
+                  "physicalType": "long"
+                },
+                "sink": {
+                  "name": "recovered",
+                  "physicalType": "bigint"
+                }
+              },
+              {
+                "source": {
+                  "name": "tests",
+                  "type": "Int64",
+                  "physicalType": "long"
+                },
+                "sink": {
+                  "name": "tests",
+                  "physicalType": "bigint"
+                }
+              },
+              {
+                "source": {
+                  "name": "population",
+                  "type": "Int64",
+                  "physicalType": "long"
+                },
+                "sink": {
+                  "name": "population",
+                  "physicalType": "bigint"
+                }
+              },
+              {
+                "source": {
+                  "name": "death_rate_pct",
+                  "type": "Double",
+                  "physicalType": "double"
+                },
+                "sink": {
+                  "name": "death_rate_pct",
+                  "physicalType": "float"
+                }
+              },
+              {
+                "source": {
+                  "name": "test_per_thousand",
+                  "type": "Double",
+                  "physicalType": "double"
+                },
+                "sink": {
+                  "name": "test_per_thousand",
+                  "physicalType": "float"
+                }
+              },
+              {
+                "source": {
+                  "name": "cases_per_million",
+                  "type": "Int64",
+                  "physicalType": "long"
+                },
+                "sink": {
+                  "name": "cases_per_million",
+                  "physicalType": "bigint"
+                }
+              }
+            ]
+          },
+          "enableStaging": true
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "Copy_u1k",
+        "dependsOn": []
+      }
+    ]
+  }
+}

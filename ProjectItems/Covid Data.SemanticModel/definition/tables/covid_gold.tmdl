@@ -1,0 +1,113 @@
+table covid_gold
+	lineageTag: 3f99f69e-fafe-4a9c-8e4b-5aac398f6a65
+	sourceLineageTag: [dbo].[covid_gold]
+
+	column country
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 25f2b7af-ff2e-469c-9815-fdbab2d5cd06
+		sourceLineageTag: country
+		summarizeBy: none
+		sourceColumn: country
+
+		annotation SummarizationSetBy = Automatic
+
+	column cases
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 828ee5e0-757f-435c-aa0a-6d97c3d66175
+		sourceLineageTag: cases
+		summarizeBy: sum
+		sourceColumn: cases
+
+		annotation SummarizationSetBy = Automatic
+
+	column deaths
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 7d5829fb-e049-41b2-8b80-271467e86069
+		sourceLineageTag: deaths
+		summarizeBy: sum
+		sourceColumn: deaths
+
+		annotation SummarizationSetBy = Automatic
+
+	column recovered
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 55f243db-4c44-48db-a002-f89451f61f07
+		sourceLineageTag: recovered
+		summarizeBy: sum
+		sourceColumn: recovered
+
+		annotation SummarizationSetBy = Automatic
+
+	column tests
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 3ff93cb9-13b5-4036-b693-b9feb02ff780
+		sourceLineageTag: tests
+		summarizeBy: sum
+		sourceColumn: tests
+
+		annotation SummarizationSetBy = Automatic
+
+	column population
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 542e3eb7-619c-4c4e-a072-f2b8b6abc200
+		sourceLineageTag: population
+		summarizeBy: sum
+		sourceColumn: population
+
+		annotation SummarizationSetBy = Automatic
+
+	column death_rate_pct
+		dataType: double
+		sourceProviderType: float
+		lineageTag: b313d837-b717-4479-938c-016b0479b83e
+		sourceLineageTag: death_rate_pct
+		summarizeBy: sum
+		sourceColumn: death_rate_pct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column test_per_thousand
+		dataType: double
+		sourceProviderType: float
+		lineageTag: e38be501-e67d-4e13-88a6-9c7ddd3bcf5c
+		sourceLineageTag: test_per_thousand
+		summarizeBy: sum
+		sourceColumn: test_per_thousand
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column cases_per_million
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 66368745-32f7-4371-881c-77c70b702817
+		sourceLineageTag: cases_per_million
+		summarizeBy: sum
+		sourceColumn: cases_per_million
+
+		annotation SummarizationSetBy = Automatic
+
+	partition covid_gold = entity
+		mode: directLake
+		source
+			entityName: covid_gold
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

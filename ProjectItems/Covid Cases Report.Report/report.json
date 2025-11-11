@@ -1,0 +1,69 @@
+{
+  "config": "{\"version\":\"5.68\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY25SU11\",\"version\":{\"visual\":\"2.4.0\",\"report\":\"3.0.0\",\"page\":\"2.3.0\"},\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY25SU11",
+            "path": "BaseThemes/CY25SU11.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Page 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "25c7a1ae87ea605038ed",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"2a3fed75c44d9933fdd9\",\"layouts\":[{\"id\":0,\"position\":{\"x\":862.4535315985131,\"y\":203.4200743494424,\"z\":2,\"width\":359.2565055762082,\"height\":367.5836431226766,\"tabOrder\":2}}],\"singleVisual\":{\"visualType\":\"barChart\",\"projections\":{\"Category\":[{\"queryRef\":\"covid_gold.country\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(covid_gold.test_per_thousand)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"covid_gold\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"country\"},\"Name\":\"covid_gold.country\",\"NativeReferenceName\":\"country\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"test_per_thousand\"}},\"Function\":0},\"Name\":\"Sum(covid_gold.test_per_thousand)\",\"NativeReferenceName\":\"Sum of test_per_thousand\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"test_per_thousand\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"valueAxis\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 367.58,
+          "width": 359.26,
+          "x": 862.45,
+          "y": 203.42,
+          "z": 2.00
+        },
+        {
+          "config": "{\"name\":\"2ac6299b503cf3962480\",\"layouts\":[{\"id\":0,\"position\":{\"x\":58.28996282527881,\"y\":203.4200743494424,\"z\":0,\"width\":360.4460966542751,\"height\":367.5836431226766,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"barChart\",\"projections\":{\"Category\":[{\"queryRef\":\"covid_gold.country\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(covid_gold.deaths)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"covid_gold\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"country\"},\"Name\":\"covid_gold.country\",\"NativeReferenceName\":\"country\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"deaths\"}},\"Function\":0},\"Name\":\"Sum(covid_gold.deaths)\",\"NativeReferenceName\":\"Sum of deaths\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"deaths\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"valueAxis\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 367.58,
+          "width": 360.45,
+          "x": 58.29,
+          "y": 203.42,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"40c25ed363aa6b45e7c6\",\"layouts\":[{\"id\":0,\"position\":{\"x\":460.3717472118959,\"y\":204.6096654275093,\"z\":1,\"width\":359.2565055762082,\"height\":367.5836431226766,\"tabOrder\":1}}],\"singleVisual\":{\"visualType\":\"barChart\",\"projections\":{\"Category\":[{\"queryRef\":\"covid_gold.country\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(covid_gold.recovered)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"covid_gold\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"country\"},\"Name\":\"covid_gold.country\",\"NativeReferenceName\":\"country\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"recovered\"}},\"Function\":0},\"Name\":\"Sum(covid_gold.recovered)\",\"NativeReferenceName\":\"Sum of recovered\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"recovered\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"valueAxis\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 367.58,
+          "width": 359.26,
+          "x": 460.37,
+          "y": 204.61,
+          "z": 1.00
+        },
+        {
+          "config": "{\"name\":\"ed000e2a9e1f6ac1ea07\",\"layouts\":[{\"id\":0,\"position\":{\"x\":460.3717472118959,\"y\":13.08550185873606,\"z\":3,\"width\":359.2565055762082,\"height\":64.23791821561339,\"tabOrder\":3}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Covid Cases Report\",\"textStyle\":{\"fontFamily\":\"Segoe (Bold)\",\"fontSize\":\"24pt\"}}],\"horizontalTextAlignment\":\"center\"}]}}]}}}",
+          "filters": "[]",
+          "height": 64.24,
+          "width": 359.26,
+          "x": 460.37,
+          "y": 13.09,
+          "z": 3.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}
